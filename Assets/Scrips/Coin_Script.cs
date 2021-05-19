@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Coin_Script : MonoBehaviour
 {
-    public Transform BetterCoin;
+    public Transform coinPrefab;
     int randomX;
     int randomZ;
+    public Transform parent;
 
 
     // Start is called before the first frame update
@@ -16,7 +17,7 @@ public class Coin_Script : MonoBehaviour
         {
             int randomX = UnityEngine.Random.Range(-43, 43);
             int randomZ = UnityEngine.Random.Range(-43, 43);
-            Instantiate(BetterCoin, new Vector3(randomX, 1.5f, randomZ), Quaternion.Euler(90f, 0f, 90f));
+            Instantiate(coinPrefab, new Vector3(randomX, 23f, randomZ), Quaternion.Euler(0f, 0f, 90f), parent);
             Debug.Log(randomX & randomZ);
         }
         
