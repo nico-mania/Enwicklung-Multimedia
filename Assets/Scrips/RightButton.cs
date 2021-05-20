@@ -19,6 +19,8 @@ public class RightButton : MonoBehaviour
         buttonObj.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
     }
 
+    
+
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
         buttonPressed = true;
@@ -32,7 +34,6 @@ public class RightButton : MonoBehaviour
         FixedUpdate();
         Debug.Log("right is released");
     }
-
     void FixedUpdate()
     {
         if (buttonPressed)
@@ -43,4 +44,5 @@ public class RightButton : MonoBehaviour
             target.transform.rotation = Quaternion.LookRotation(targetDirection);
         }
     }
+
 }
