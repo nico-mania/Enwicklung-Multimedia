@@ -3,6 +3,7 @@
 public class FollowPlayer : MonoBehaviour
 {
     public Transform player;
+    
 
     [SerializeField] public Vector3 offset;
     // Update is called once per frame
